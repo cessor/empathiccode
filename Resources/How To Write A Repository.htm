@@ -1,0 +1,272 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>How To Write A Repository</title>
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type' />
+    <meta content=', eabstractions, books, domain driven design, java, object orientation, software design' name='keywords' />
+    <meta content='Persistence has been a hot topic in software development for a long time. The main problem is that the most popular approach for software development these days, Object-Orientation, doesn’t really map easily to efficient external storage systems like relational or even noSQL databases. ' name='description' />
+    <link href='/assets/css/reset.css' rel='stylesheet' type='text/css' />
+    <link href='/assets/css/style.css' media='screen' rel='stylesheet' type='text/css' />
+  </head>
+  <body>
+    <div id='main'>
+      <div id='header'>
+        <div class='logo'>
+          <a href='/'>&laquo; Phil Calçado</a>
+        </div>
+        <div id='nav'>
+          <ul>
+            <li><a href='/about.html'>about</a></li>
+            <li><a href='/presentations.html'>presentations</a></li>
+            <li><a href='/articles.html'>articles</a></li>
+            <li><a href='/tags.html'>tags</a></li>
+            <li>
+              <a href='/atom.xml'>rss</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class='clear'></div>
+      <div class='article'>
+        <h1>
+          How To Write A Repository
+        </h1>
+        <div class='meta'>
+          <ul class='tags'>
+            <li>Dec 23, 2010</li>
+            <li>
+              &middot;
+            </li>
+            <li>
+              <a href='/2010/12/23/how_to_write_a_repository.html#disqus_thread'></a>
+            </li>
+            <li>&middot;</li>
+            <li>
+              <a class='tag' href='/tags/books/'>
+                books
+              </a>
+            </li>
+            <li>
+              <a class='tag' href='/tags/domain driven design/'>
+                domain driven design
+              </a>
+            </li>
+            <li>
+              <a class='tag' href='/tags/abstractions/'>
+                eabstractions
+              </a>
+            </li>
+            <li>
+              <a class='tag' href='/tags/java/'>
+                java
+              </a>
+            </li>
+            <li>
+              <a class='tag' href='/tags/object orientation/'>
+                object orientation
+              </a>
+            </li>
+            <li>
+              <a class='tag' href='/tags/software design/'>
+                software design
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class='body'>
+          <p>Out of <a href="http://philcalcado.com/2010/03/22/nevermind-domain-driven-design/">the supporting Patterns catalogued by Eric Evans</a>, the Repository patterns is probably the most popular.</p>
+          
+          <p>Persistence has been a hot topic in software development for a long time. The main problem is that the most popular approach for software development these days, Object-Orientation, doesn’t really map easily to efficient external storage systems like relational or even noSQL databases.</p>
+          
+          <p>The technical limitations were mostly solved with some fantastic object mapping tools like Hibernate that make persisting and querying objects a breeze for most scenarios. The problem then became how do we integrate the act of persisting and retrieving objects with our Domain Model and, more important, our Ubiquitous Language.</p>
+          
+          <p>Most of us use specialised objects &#8211;DAOs and Data Mappers in general&#8211; to convert business objects from and to their persistent equivalent. Those objects are often good enough for the task but they belong to the Infrastructure Layer and don’t transparently integrate with the Ubiquitous Language.</p>
+          
+          <p>A good way to integrate persistence needs and the Ubiquitous Language is using what is known as Repositories. In his book, Evans defines the Repository pattern as <em>&#8220;A mechanism for encapsulating storage, retrieval, and search behaviour which emulates a collection of objects&#8221;</em>. This concept is easily assimilated by the Ubiquitous Language and simple enough to implement and to explain to domain experts.</p>
+          
+          <h3>Naming</h3>
+          
+          
+          <p>
+          The concept of a Repository as a list of objects is not too hard to understand but it is very common for those classes to end up with methods that are not related to lists at all.</p>
+          
+          <p>After coaching many teams in the adoption of a Ubiquitous Language and related patterns, I’ve found out that the best way to make people remember that Repositories are not DAO-like classes starts with how you name them.</p>
+          
+          <p>Years ago <a href=http://twitter.com/#!/rodrigoy>Rodrigo Yoshima</a> told me about his convention when naming Repositories. Instead of the more common naming style displayed below:</p>
+          
+          <pre name="code" class="java"> &#x000A;class OrderRepository {&#x000A;List&lt;Order&gt; getOrdersFor(Account a){...}&#x000A;}</pre>          
+          
+          <p></p>
+          
+          <p>He promotes this:</p>
+          
+          <pre name="code" class="java"> &#x000A;class AllOrders {&#x000A;List&lt;Order&gt; belongingTo(Account a){...}&#x000A;}</pre>
+          
+          
+          <p></p>
+          
+          <p>It looks like a small change but it helps a lot. As an example, let’s look at two repositories that contain methods that don’t belong to them. Which one do you think it’s easier to identify as problematic?</p>
+          
+          <pre name="code" class="java"> &#x000A;//classic naming style&#x000A;class UserRepository{&#x000A; User retrieveUserByLogin(String login){...}&#x000A; void submitOrder(Order order){...}&#x000A;}&#x000A; &#x000A;//client code&#x000A;User u = userRepository.retrieveUserByLogin(“pcalcado”);&#x000A;userRepository.submitOrder(new Order());</pre>
+          
+          
+          <p></p>
+          
+          <pre name="code" class="java"> &#x000A;//Yoshima’s naming style&#x000A;class AllUsers{&#x000A; User withLogin(String login){...}&#x000A; void submitOrder(Order order){...}&#x000A;}&#x000A; &#x000A;//client code&#x000A;User u = allusers.withLogin(“pcalcado”);&#x000A;allusers.submitOrder(new Order());</pre>
+          
+          
+          <p></p>
+          
+          <p>Keep in mind that the language you use does impact how you think (<a href=http://en.wikipedia.org/wiki/Linguistic_relativity >Sapir-Whorf</a> works for programming). Methods that start with <em>retrieve</em>, <em>list</em> of <em>get</em> are often bad smells.</p>
+          
+          <h3>Avoid Method Explosion</h3>
+          
+          
+          <p>
+          A good Repository will model domain concepts in its interface. As an example, let’s assume that we have a business rule that says that <em>every order placed in a weekend has 10% surcharge applied to it</em>. If we want to display all orders in this situation we could do something like this:</p>
+          
+          <pre name="code" class="java"> &#x000A;List&lt;Order&gt; surchargedOrders = allOrders.placed(user, IN_A_SATURDAY);&#x000A;surchargedOrders.addAll(allOrders.placed(user, IN_A_SUNDAY));&#x000A;return surchargedOrders;</pre>
+          
+          
+          <p></p>
+          
+          <p>That works well but we’re leaking abstractions here. The fact that surcharged orders happen to be those placed in weekends shouldn’t be exposed to clients like that. Something like this will be better:</p>
+          
+          <pre name="code" class="java"> &#x000A;return allOrders.surchargedFor(user);</pre>
+          
+          
+          <p></p>
+          
+          <p>The problem with that is that for some entities you may end up having too many querying methods in a Repository. There are many ways to deal with this; you can parameterise the method call either with some flag or a Specification, for example:</p>
+          
+          <pre name="code" class="java"> &#x000A;Specification surcharged = specifications.surcharged();&#x000A;return allOrders.thatAre(user, surchanged);</pre>
+          
+          
+          <p></p>
+          
+          <p>(note: in the example above I consider the <em>specifications</em>
+          object a Repository of Specifications)</p>
+          
+          <p>But there is another strategy that I quite like: multiple Repositories. In our ordering example there is no reason we can have two Repositories: <em>AllOrders</em> and <em>SurchargedOrders</em>. AllOrders represent a list containing every single order in the system, SurchargedOrders represents a subset of it.
+          In our case we end up with something like:</p>
+          
+          <pre name="code" class="java"> &#x000A;//returns all orders&#x000A;return allOrders.from(user);&#x000A; &#x000A;//returns only orders with applied surcharge&#x000A;return surchargedOrders.from(user);</pre>
+          
+          
+          <p></p>
+          
+          <p>The <em>”Subset Repositories”</em> will often be modelled as classes but they can also be just parameterised instances of a base Repository. For example, we can have something like:</p>
+          
+          <pre name="code" class="java"> &#x000A;//a base Repository&#x000A;class Users {&#x000A; private User.Status desiredStatus = null;&#x000A; &#x000A; public Users(){&#x000A;   this(User.Status.ANY);&#x000A; }&#x000A; &#x000A; public Users(User.Status desiredStatus){&#x000A;   this.desiredStatus= desiredStatus;&#x000A; }&#x000A; //methods go here...&#x000A;}&#x000A; &#x000A;//instantiated somewhere as&#x000A;private Users allUsers = new Users();&#x000A;private Users activeUsers = new Users(User.Status.ACTIVE);&#x000A;private Users inactiveUsers = new Users(User.Status.INACTIVE);</pre>
+          
+          
+          <p></p>
+          
+          <p>Obviously there is always the risk that we replace method explosion with class explosion but my experience says that if subsets and modelled after the Ubiquitous Language this will not become a problem.</p>
+          
+          <h3>One Type Only</h3>
+          
+          
+          <p>
+          Another popular problem with Repositories happens when they start looking more like a <em>bag of stuff</em> as opposed to a collection. The naming strategy described above can help making the issue clear, but in many cases this is not seemed as a big deal until you end up with a Repository with one thousand lines of codes and efferent coupling so high that every single check-in includes changes to this class.</p>
+          
+          <p>Here is an example from a system I’ve worked with:</p>
+          
+          <pre name="code" class="java"> &#x000A;public interface AllServices {&#x000A; &#x000A;    List&lt;Service&gt; belongingTo(List&lt;Account&gt; accounts);&#x000A; &#x000A;    Service withNumber(String serviceNumber);&#x000A; &#x000A;    List&lt;Service&gt; relatedTo(Service otherService);&#x000A; &#x000A;    List&lt;Product&gt; allActiveProductsBelongingTo(List&lt;Account&gt; accounts);&#x000A; &#x000A;    List&lt;Product&gt; allProductsBelongingTo(List&lt;Account&gt; accounts);&#x000A; &#x000A;    ContractDetails retrieveContractDetails(String serviceNumber);&#x000A;}</pre>
+          
+          
+          <p></p>
+          
+          <p>It looks like the developers started by applying Yoshima’s naming convention but eventually started placing all sort of related methods in the Repository. It’s not modelling a collection anymore and the name <em>AllServices</em> does not make any sense.</p>
+          
+          <p>A design smell to look for when designing Repositories is when more than one type is returned from its methods. It is probably ok to return <em>Fundamental</em> types like strings and booleans, but if your Repository returns more than one type of domain object you may be better splitting the <em>bag of stuff</em> into separate collections:</p>
+          
+          <pre name="code" class="java"> &#x000A;public interface AllServices {&#x000A; &#x000A;    List&lt;Service&gt; belongingTo(List&lt;Account&gt; accounts);&#x000A; &#x000A;    Service withNumber(String serviceNumber);&#x000A; &#x000A;    List&lt;Service&gt; relatedTo(Service otherService);&#x000A;}&#x000A; &#x000A;public interface AllProducts {&#x000A; &#x000A;    List&lt;Product&gt; activeBelongingTo(List&lt;Account&gt; accounts);&#x000A; &#x000A;    List&lt;Product&gt; belongingTo(List&lt;Account&gt; accounts);&#x000A;}&#x000A; &#x000A;public interface AllContractDetails {&#x000A;   ContractDetails forServiceNumber(String serviceNumber);&#x000A;}</pre>
+          
+          
+          <p></p>
+          
+          <p>Many times Repositories end up like this because a given class has access to everything required to return more than one object and it would be wasteful to create wrappers for each type. In this case you probably should still model your Repositories as different entities and have them implemented by the one class, like this:</p>
+          
+          <pre name="code" class="java"> &#x000A;public class BillingSystemGateway implements AllServices, AllProducts , AllContractDetails {&#x000A; &#x000A;    List&lt;Service&gt; belongingTo(List&lt;Account&gt; accounts){...}&#x000A; &#x000A;    Service withNumber(String serviceNumber) {...}&#x000A; &#x000A;    List&lt;Service&gt; relatedTo(Service otherService) {...}&#x000A; &#x000A;List&lt;Product&gt; activeBelongingTo(List&lt;Account&gt; accounts) {...}&#x000A; &#x000A;List&lt;Product&gt; belongingTo(List&lt;Account&gt; accounts) {...}&#x000A; &#x000A;ContractDetails forServiceNumber(String serviceNumber) {...}</pre>
+          
+          
+          <p></p>
+          
+          <p>This shouldn’t be very common, though. If you are facing this scenario too frequently it may be a good time to revisit your integration code.</p>
+          
+          <h3>Not Only Persistence</h3>
+          
+          
+          <p>
+          Repositories are often used to model object persistence, but that doesn’t have to be the only case. They are quite useful for <a href=http://philcalcado.com/2010/02/24/everyday-tales-anatomy-of-a-refactoring/>system integration</a>, simple in-memory collections and even to return Value Objects.</p>
+          
+          <p>Keep in mind that the main benefit of Repositories is to explicitly have a place where objects come from and make this object part of the Ubiquitous Language. The actual implementation of the Repository may have a big impact in how we model its interface but in the end of the day we should aim to have it as close as a list of domain objects as possible.</p>
+        </div>
+      </div>
+      <div id='other-articles'>
+        <div class='older'>
+          <ul>
+          </ul>
+        </div>
+        <div class='newer'>
+          <ul>
+            <li>
+              <h3>
+                <a href='/2010/12/24/new_blog_engine_new_host.html' title='New Blog Engine, New Host'>
+                  New Blog Engine, New Host &raquo;
+                </a>
+              </h3>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class='clear'></div>
+      <div class='comments'>
+        <div id='disqus_thread'></div>
+        <script src='http://disqus.com/forums/fragmental/embed.js' type='text/javascript'></script>
+        <noscript>
+          <a href='http://disqus.com/forums/fragmental/?url=ref'>
+            View the discussion thread
+          </a>
+        </noscript>
+      </div>
+      <!-- / disqus adds too much visual crap -->
+      <style type='text/css'>
+        .dsq-dc-logo {
+          display: none !important; }
+      </style>
+      <div class='clear'></div>
+    </div>
+    <script type='text/javascript'>
+      //<![CDATA[
+        (function() {
+          var links = document.getElementsByTagName('a');
+          var query = '?';
+          for(var i = 0; i < links.length; i++) {
+            if(links[i].href.indexOf('#disqus_thread') >= 0) {
+              query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
+            }
+          }
+          document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/fragmental/get_num_replies.js' + query + '"></' + 'script>');
+        })();
+      //]]>
+    </script>
+    <script type='text/javascript'>
+      //<![CDATA[
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+      //]]>
+    </script>
+    <script type='text/javascript'>
+      //<![CDATA[
+        try {
+          var pageTracker = _gat._getTracker("UA-134259-3");
+          pageTracker._setDomainName(".philcalcado.com");
+          pageTracker._setAllowHash(false);
+          pageTracker._trackPageview();
+        } catch(err) {}
+      //]]>
+    </script>
+  </body>
+</html>

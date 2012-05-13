@@ -1,0 +1,498 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head profile="http://gmpg.org/xfn/11">
+	<title>  Nevermind Domain-Driven Design at  PhilCalcado.com</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="generator" content="WordPress 2.5"/>
+<meta name="verify-v1" content="CzlmDEDBOB5u6wHQ/Qr0VA4mJrIg/Lf5P8k4euQmqo4=" />
+	<meta name="template" content="K2 1.2" />
+ 	<meta name="description" content="Repeat after me: Data is code, code is data." />
+	<link rel="stylesheet" type="text/css" media="screen" href="http://philcalcado.com/wp-content/themes/unwakeable-12/style.css" />
+	<link rel="stylesheet" type="text/css" media="print" href="http://philcalcado.com/wp-content/themes/unwakeable-12/css/print.css" />
+	
+	<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://philcalcado.com/feed/" />
+	<link rel="alternate" type="text/xml" title="RSS .92" href="http://philcalcado.com/feed/rss/" />
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://philcalcado.com/" />
+
+		<link rel="pingback" href="http://philcalcado.com/xmlrpc.php" />
+	
+	<script type="text/javascript" src="http://philcalcado.com/wp-content/themes/unwakeable-12/js/k2functions.js"></script>
+	<script type="text/javascript" src="http://philcalcado.com/wp-content/themes/unwakeable-12/js/prototype.js.php"></script>
+	<script type="text/javascript" src="http://philcalcado.com/wp-content/themes/unwakeable-12/js/effects.js.php"></script>
+	<script type="text/javascript" src="http://philcalcado.com/wp-content/themes/unwakeable-12/js/slider.js.php"></script>
+
+	
+		<script type="text/javascript" src="http://philcalcado.com/wp-content/themes/unwakeable-12/js/livesearch.js.php"></script>
+	
+	
+	
+		<link rel='archives' title='December 2010' href='http://philcalcado.com/2010/12/' />
+	<link rel='archives' title='October 2010' href='http://philcalcado.com/2010/10/' />
+	<link rel='archives' title='September 2010' href='http://philcalcado.com/2010/09/' />
+	<link rel='archives' title='August 2010' href='http://philcalcado.com/2010/08/' />
+	<link rel='archives' title='June 2010' href='http://philcalcado.com/2010/06/' />
+	<link rel='archives' title='May 2010' href='http://philcalcado.com/2010/05/' />
+	<link rel='archives' title='March 2010' href='http://philcalcado.com/2010/03/' />
+	<link rel='archives' title='February 2010' href='http://philcalcado.com/2010/02/' />
+	<link rel='archives' title='December 2009' href='http://philcalcado.com/2009/12/' />
+	<link rel='archives' title='November 2009' href='http://philcalcado.com/2009/11/' />
+	<link rel='archives' title='October 2009' href='http://philcalcado.com/2009/10/' />
+	<link rel='archives' title='August 2009' href='http://philcalcado.com/2009/08/' />
+	<link rel='archives' title='July 2009' href='http://philcalcado.com/2009/07/' />
+	<link rel='archives' title='June 2009' href='http://philcalcado.com/2009/06/' />
+	<link rel='archives' title='April 2009' href='http://philcalcado.com/2009/04/' />
+	<link rel='archives' title='March 2009' href='http://philcalcado.com/2009/03/' />
+	<link rel='archives' title='February 2009' href='http://philcalcado.com/2009/02/' />
+	<link rel='archives' title='January 2009' href='http://philcalcado.com/2009/01/' />
+	<link rel='archives' title='December 2008' href='http://philcalcado.com/2008/12/' />
+	<link rel='archives' title='November 2008' href='http://philcalcado.com/2008/11/' />
+	<link rel='archives' title='October 2008' href='http://philcalcado.com/2008/10/' />
+	<link rel='archives' title='September 2008' href='http://philcalcado.com/2008/09/' />
+	<link rel='archives' title='August 2008' href='http://philcalcado.com/2008/08/' />
+	<link rel='archives' title='July 2008' href='http://philcalcado.com/2008/07/' />
+	<link rel='archives' title='June 2008' href='http://philcalcado.com/2008/06/' />
+	<link rel='archives' title='May 2008' href='http://philcalcado.com/2008/05/' />
+	<link rel='archives' title='April 2008' href='http://philcalcado.com/2008/04/' />
+	<link rel='archives' title='March 2008' href='http://philcalcado.com/2008/03/' />
+	<link rel='archives' title='February 2008' href='http://philcalcado.com/2008/02/' />
+	<link rel='archives' title='January 2008' href='http://philcalcado.com/2008/01/' />
+	<link rel='archives' title='December 2007' href='http://philcalcado.com/2007/12/' />
+	<link rel='archives' title='November 2007' href='http://philcalcado.com/2007/11/' />
+	<link rel='archives' title='October 2007' href='http://philcalcado.com/2007/10/' />
+	<link rel='archives' title='September 2007' href='http://philcalcado.com/2007/09/' />
+	<link rel='archives' title='August 2007' href='http://philcalcado.com/2007/08/' />
+
+	<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://philcalcado.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://philcalcado.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 2.5" />
+
+	<link href="http://philcalcado.com/wp-content/plugins/google-syntax-highlighter/Styles/SyntaxHighlighter.css" type="text/css" rel="stylesheet" />
+		
+</head>
+
+
+<body class="wordpress k2 y2010 m12 d23 h11 single s-y2010 s-m03 s-d23 s-h12 s-category-agile s-category-books s-category-c s-category-domain-driven-design s-category-dsls s-category-events s-category-java s-category-lop s-category-layers s-category-object-orientation s-category-software-architecture s-category-software-design s-category-trends s-author-pcalcado" >
+<div id="page">
+
+	<div id="header">
+             <div class="top">
+
+            <div id="title" class="title"><a href="http://philcalcado.com" title="Back to the front page"></a>
+                 </div>
+		
+		<ul id="menu">
+			<li class="page_item page-item-14"><a href="http://philcalcado.com/research-on-dsls/" title="Research">Research</a></li>
+
+		</ul>
+                
+	     </div>
+	</div>
+
+		<hr />
+
+
+
+<div class="content">
+	
+	<div id="primary">
+		<div id="current-content">
+			<div id="primarycontent" class="hfeed">
+
+						
+	 
+
+	
+	
+		
+	<hr />
+
+	
+	<div class="navigation">
+		<div class="left"><span>&laquo;</span> <a href="http://philcalcado.com/2010/03/10/everyday-tales-anatomy-of-a-refactoring-%e2%80%93-part-3/">Everyday Tales: Anatomy of a Refactoring – Part 3</a></div>		<div class="right"><a href="http://philcalcado.com/2010/05/08/recovering-agile-projects/">Recovering Agile Projects</a> <span>&raquo;</span></div>		<div class="clear"></div>
+	</div>
+
+	
+	<hr />
+
+	
+		<div id="post-163" class="hentry p1 post publish author-pcalcado category-agile category-books category-c category-domain-driven-design category-dsls category-events category-java category-lop category-layers category-object-orientation category-software-architecture category-software-design category-trends y2010 m03 d23 h12 alt">
+			<div class="entry-head">
+				<h3 class="entry-title"><a href="http://philcalcado.com/2010/03/22/nevermind-domain-driven-design/" rel="bookmark" title='Permanent Link to "Nevermind Domain-Driven Design"'>Nevermind Domain-Driven Design</a></h3>
+				
+				<small class="entry-meta">
+					<span class="chronodata">
+						Published by <span class="vcard author"><a href="http://philcalcado.com/author/pcalcado/" class="url fn">Phillip Calçado</a></span> <abbr class="published" title="2010-03-22T22:32:21-0400">March 22nd, 2010</abbr>					</span>
+
+					<span class="entry-category">in <a href="http://philcalcado.com/category/agile/" title="View all posts in agile">agile</a>, <a href="http://philcalcado.com/category/books/" title="View all posts in books">books</a>, <a href="http://philcalcado.com/category/c/" title="View all posts in c#">c#</a>, <a href="http://philcalcado.com/category/domain-driven-design/" title="View all posts in domain driven design">domain driven design</a>, <a href="http://philcalcado.com/category/lop/dsls/" title="View all posts in domain specific languages">domain specific languages</a>, <a href="http://philcalcado.com/category/events/" title="View all posts in events">events</a>, <a href="http://philcalcado.com/category/java/" title="View all posts in java">java</a>, <a href="http://philcalcado.com/category/lop/" title="View all posts in language oriented programming">language oriented programming</a>, <a href="http://philcalcado.com/category/software-architecture/layers/" title="View all posts in layers">layers</a>, <a href="http://philcalcado.com/category/object-orientation/" title="View all posts in object orientation">object orientation</a>, <a href="http://philcalcado.com/category/software-architecture/" title="View all posts in software architecture">software architecture</a>, <a href="http://philcalcado.com/category/software-design/" title="View all posts in software design">software design</a> and <a href="http://philcalcado.com/category/trends/" title="View all posts in trends">trends</a>.</span>
+					
+<!-- share -->
+ <div>
+	 <table border='0'>
+	   <tr>
+	     <td>
+	       <script>reddit_url='http://philcalcado.com/2010/03/22/nevermind-domain-driven-design/';</script>
+	       <script>reddit_title="Nevermind Domain-Driven Design";</script>
+	       <script language="javascript" src="http://reddit.com/button.js?t=1"></script>
+	       </td>
+	 </tr>
+       </table>  
+	</div>
+	
+									
+														</small> <!-- .entry-meta -->
+			</div> <!-- .entry-head -->
+
+			<div class="entry-content">
+				<p>Over the past years I&#8217;ve held many workshops on Domain-Driven Design. We had more than one hundred people on those sessions, and feedback was often pretty good. After my last run I told my business partner that this was my last time running those workshops. </p>
+<p>I think that Domain-Driven Design is one of the most important <em>mainstream</em> technical books published this decade. I did enjoy a lot the activities we performed and the people we met during those sessions. I guess I&#8217;m just too tired of how our industry just does not get the difference between Domain-Driven Design and Object-Orientation.</p>
+<p>Being specific, the reasons I am so tired are:</p>
+<ol>
+<li>It seems to be <strong>extremely</strong> hard for people to understand Domain-Driven Design.</li>
+<li>People don’t have to understand Domain-Driven Design to benefit from it</li>
+</ol>
+<p>Please let me elaborate.</p>
+<h4>It seems to be extremely hard for people to understand Domain-Driven Design</h4>
+<p>Let’s do a quick search on Google:</p>
+<table border="1">
+<tr>
+<td>Hits on Google</td>
+<td>Mentions in the Book</td>
+<td>Search</td>
+</tr>
+<tr>
+<td>11,500</td>
+<td>34</td>
+<td><a href="http://www.google.com.au/search?q=%2B%22domain+driven+design%22+%2Brepository">+&#8221;domain driven design&#8221; +repository</a></td>
+</tr>
+<tr>
+<td>5,800</td>
+<td>20</td>
+<td><a href="http://www.google.com.au/search?q=%2B%22domain+driven+design%22+%2Bcorruption">+&#8221;domain driven design&#8221; +corruption</a></td>
+</tr>
+<tr>
+<td><strong>5,460</strong></td>
+<td>52</td>
+<td><a href="http://www.google.com.au/search?q=%2B%22domain+driven+design%22+%2Bubiquitous">+&#8221;domain driven design&#8221; +ubiquitous</a>
+</td>
+</tr>
+</table>
+<p>This is just a quick example of how people understand Domain-Driven Design: There are much more hits on Google about the Repository and Anti-Corruption Layer Patterns than about the Ubiquitous Language. To better understand the problem that this represents, let&#8217;s revisit the book.</p>
+<p><em>Ubiquitous Language</em> is defined on Part I. Accordingly to the book, Part I<br />
+<em>&#8220;presents the basic goals of domain-driven development&#8221;</eM>.  Just before that, in his foreword, Martin Fowler also says:</p>
+<blockquote><p>Eric also cements many of the things that we&#8217;ve learned over the years. First, in domain modeling, you shouldn&#8217;t separate the concepts from the implementation. An effective domain modeler can not only use a whiteboard with an accountant, but also write Java with a programmer. Partly this is true because you cannot build a useful conceptual model without considering implementation issues. <strong>But the primary reason why concepts and implementation belong together is this: The greatest value of a domain model is that it provides a ubiquitous language that ties domain experts and technologists together.</strong>
+</p></blockquote>
+<p>That sounds pretty important, doesn&#8217;t it?</p>
+<p><a href="http://www.amazon.com/gp/product/0321127420?ie=UTF8&#038;tag=fragmental-20&#038;linkCode=as2&#038;camp=1789&#038;creative=390957&#038;creativeASIN=0321127420">The Repository Pattern, on the other hand, was catalogued by Fowler in his Patterns of Enterprise Application Architecture</a> and is presented by Evans in Part II. The Author says that this part’s goal <em>&#8220;is to focus on the kinds of decisions that keep the model and implementation aligned with each other, each reinforcing the other&#8217;s effectiveness&#8221;</em>. </p>
+<p>The large number of hits for the Anti-Corruption Layer is even more disturbing. It is presented in Part IV, and this part <em>&#8220;enables the goals of Part I to be realized on a larger scale, for a big system or an application that fits into a sprawling, enterprise-wide network&#8221;</em>.</p>
+<p>That&#8217;s odd. A lot of people are talking about Eric Evans&#8217; work and yet <strong>people seem to be more interested in the building blocks than in the actual core of Domain-Driven Design</strong>.</p>
+<p>That was the reason that I created that workshop. All over forums and user groups people are talking about Domain-Driven Design as if it were just a modeling technique and/or a Pattern Language. Given that the Patterns and techniques that the book mentions are anything but new to Object-Orientation, I have to ask: <strong>if Domain-Driven Design is just about how create an object model, how is it different from what was developed in decades of Object-Orientation?</strong></p>
+<p>Repositories, Value Objects, Entities, Specifications&#8230; nothing about these is new. If Evans had written a book only to catalog these Patterns he would just be repeating what other people already said years ago. Is very unlikely that his work would have any relevancy or generate much interest.</p>
+<p>But that’s not the case. Domain-Driven Design uses the Patterns, techniques and strategies to enable the only thing that this technique actually brings to the table: <strong>to keep model and implementation aligned and use a language that reflects this model</strong>. Quoting the book once more:</p>
+<blockquote><p>
+In domain-driven design, three basic uses determine the choice of a model.<br />
+1.	The model and the heart of the design shape each other. [&#8230;]</p>
+<p><strong>2.	The model is the backbone of a language used by all team members. Because of the binding of model and implementation, developers can talk about the program in this language. They can communicate with domain experts without translation. And because the language is based on the model, our natural linguistic abilities can be turned to refining the model itself. </strong></p>
+<p>3.	The model is distilled knowledge. [&#8230;]
+</p></blockquote>
+<p>And this book does achieve the goal of showing how to bind model, language and implementation in a brilliant way. The problem is that people are just too much excited about shiny <em>&#8220;new&#8221;</em> Patterns to actually pay attention to what matters, even thought the author repeats that over and over throughout the book!</p>
+<p>I guess the problem here may be caused by the fact that most people I know made Domain-Driven Design her first book on real-world Object-Oriented design. I don’t think it is a good book for this, actually I think it is a terrible choice. Evans&#8217; book should be your third, maybe fourth book on the topic. It is much better to read it after having to fight against models that lack a unifying language.</p>
+<h4> People don’t have to understand Domain-Driven Design to benefit from it</h4>
+<p>And this is probably a good thing. As a consultant I am always on client-side and always working with teams of different levels. Most often I have a team that know just the bare basics of Object-Orientation and can’t possibly digest concepts like those presented by Evans.</p>
+<p>That’s ok though, they don’t have to. <a href= http://philcalcado.com/2008/09/23/object-oriented-design-which-how-and-what/>One of the good things about using the Domain-Driven Design way of thinking is that it provides you with a simple framework to figure out what –not how- to do</a>; but the single best thing about Domain-Driven Design in most scenarios is that people don’t have to know the name of this technique.</p>
+<p>In my workshops I explored that a lot. Only after four hours of multiple activities that focused only on modeling a domain, defining a language and refactoring it that I introduced the building blocks –and the only reason I introduced the Patterns during my workshop was because I had people that already had read the book and had questions to ask about that.</p>
+<p>And that is the same kind of thing that I do with my teams. I will try to never use the words <em>entity</em> or <em>value object</em> but I will explain<a href="http://philcalcado.com/2009/10/12/dont-trust-fake-ids/"> the different types of identity and lifecycle objects have</a>. I will not say that we have a <em>Repository of Users</em> but I will <a href="http://philcalcado.com/2007/11/29/repositories-misunderstandings/">model with them some class that represents a list of stuff</a>.</p>
+<p>My experience says that the book is not enough. My experience says that the workshop is not enough. My experience says that people have to see the goal of Domain-Driven Design by applying the Ubiquitous Language in an actual project.</p>
+
+			</div> <!-- .entry-content -->
+
+<img src="http://philcalcado.com/about/hitme/">
+
+
+		</div> <!-- #post-ID -->
+
+	
+
+		
+	
+
+
+<SCRIPT charset="utf-8" type="text/javascript" src="http://ws.amazon.com/widgets/q?ServiceVersion=20070822&MarketPlace=US&ID=V20070822/US/fragmental-20/8004/54866efe-582a-41a2-86ed-1c14bb30652b"> </SCRIPT> <NOSCRIPT><A HREF="http://ws.amazon.com/widgets/q?ServiceVersion=20070822&MarketPlace=US&ID=V20070822%2FUS%2Ffragmental-20%2F8004%2F54866efe-582a-41a2-86ed-1c14bb30652b&Operation=NoScript">Amazon.com Widgets</A></NOSCRIPT>
+
+
+				
+	
+	<div class="comments">
+
+		<h4><span id="comments">8</span> Responses to &#8220;Nevermind Domain-Driven Design&#8221;</h4>
+
+		<div class="metalinks">
+			<span class="commentsrsslink"><a href='http://philcalcado.com/2010/03/22/nevermind-domain-driven-design/feed/'>Feed for this Entry</a></span>
+			<span class="trackbacklink"><a href="http://philcalcado.com/2010/03/22/nevermind-domain-driven-design/trackback/" title="Copy this URI to trackback this entry.">Trackback Address</a></span>		</div>
+
+		
+	<hr />
+
+				<ol id="commentlist">
+
+			
+			<li id="comment-2216" class="comment c1 c-y2010 c-m03 c-d25 c-h12 alt">
+								<a href="#comment-2216" class="counter" title="Permanent Link to this Comment">1</a>
+				<span class="commentauthor"><a href='http://rafanoronha.net/' rel='external nofollow'>Rafael Noronha</a></span>
+
+				<small class="comment-meta">
+				<a href="#comment-2216" title="Permanent Link to this Comment">Mar 24th, 2010 at 10:00 pm</a>												</small>
+			
+				<div class="comment-content">
+					<p>I agree most developers don&#8217;t recognize what is important in DDD.</p>
+<p>They are so used to discuss technical stuff&#8230; and probably are not interested in learning from the business side of a software and how to communicate with customers in a better fashion.</p>
+ 
+				</div>
+
+							</li>
+
+			
+			<li id="comment-2221" class="comment c2 c-y2010 c-m03 c-d31 c-h07">
+								<a href="#comment-2221" class="counter" title="Permanent Link to this Comment">2</a>
+				<span class="commentauthor"><a href='http://blog.lowendahl.net' rel='external nofollow'>Patrik Löwendahl</a></span>
+
+				<small class="comment-meta">
+				<a href="#comment-2221" title="Permanent Link to this Comment">Mar 30th, 2010 at 5:52 pm</a>												</small>
+			
+				<div class="comment-content">
+					<p>I agree that the language is important. How to build that language, drive that language and make it work is defiantly a core part of what DDD is. But is it the single most important thing? </p>
+<p>I would argue that it isn&#8217;t. If it was, the book should&#8217;ve focused soley on that. </p>
+<p>Is it what differs from how you personally did applications before you read the book and was the strongest impression you got from it? Most probably. </p>
+<p>The purpose of Domain Driven Design is to &#8220;Tackling Complexity in the Heart of Software&#8221;. There is several other aspects that are complex in software then just capturing the domain model. This is what the rest of the book is about. </p>
+<p>This becomes clear when Eric himself often states that &#8230; &#8220;if I rewrote the book today I would put strategic design in the beginning, it is to important for my readers to miss&#8221;.   </p>
+<p>Does this mean that Strategic Design is the most important thing in DDD? It probably doesn&#8217;t, but it&#8217;s at least as important as other parts of what he wrote. So what makes projects successsful with DDD is when they grasp the whole essence, with all the pieces. </p>
+<p>A personal refletion on why there are few posts written on the language, the concept is a &#8220;Soft&#8221; one. There are a lot of nuances, lot of intepretations and not as empirical and deifinatly not as technical as most of the engineers in our bussiness would like.</p>
+ 
+				</div>
+
+							</li>
+
+			
+			<li id="comment-2226" class="comment c3 byuser commentauthor-pcalcado bypostauthor c-y2010 c-m04 c-d06 c-h12 alt">
+								<a href="#comment-2226" class="counter" title="Permanent Link to this Comment">3</a>
+				<span class="commentauthor"><a href='http://philcalcado.com' rel='external nofollow'>Phillip Calçado</a></span>
+
+				<small class="comment-meta">
+				<a href="#comment-2226" title="Permanent Link to this Comment">Apr 5th, 2010 at 10:29 pm</a>												</small>
+			
+				<div class="comment-content">
+					<p>Hi Patrik,</p>
+<p>A book that focused solely on Ubiquitous Language would be pretty useless. Evans&#8217; work is relevant exactly because he shows how to actually implement the Model-Driven approach that bases the model in the language. But, as the many quotations in my post reflect, the Ubiquitous Language is the core concept.</p>
+<p>As you said, the concept is &#8220;soft&#8221; and that&#8217;s why the other patterns and techniques are used throughout the book: to make it more real.</p>
+<p>As I said before, all other Patterns and techniques are described in much more detail in previous books -specially POEAA and Integration Patterns.If it wasn&#8217;t by the focus on the language the book itself would be anything but relevant.</p>
+ 
+				</div>
+
+							</li>
+
+			
+			<li id="comment-2227" class="comment c4 c-y2010 c-m04 c-d06 c-h11">
+								<a href="#comment-2227" class="counter" title="Permanent Link to this Comment">4</a>
+				<span class="commentauthor">Luiz</span>
+
+				<small class="comment-meta">
+				<a href="#comment-2227" title="Permanent Link to this Comment">Apr 6th, 2010 at 9:24 am</a>												</small>
+			
+				<div class="comment-content">
+					<p>If the Evans&#8217;s Book is the fourth book to read about it, what´s the books that you indicate to be the first, second and third?</p>
+<p>Thanks.</p>
+ 
+				</div>
+
+							</li>
+
+			
+		</ol> <!-- END #commentlist -->
+				
+				<ol id="pinglist">
+
+			
+			<li id="comment-2313" class="pingback c1 c-y2010 c-m05 c-d29 c-h05 alt">
+								<a href="#comment-2313" title="Permanent Link to this Comment" class="counter">1</a>
+				<span class="commentauthor"><a href='http://www.milfont.org/tech/2010/05/28/palestra-bdd-unifor-2010/' rel='external nofollow'>Palestra BDD &#8211; Unifor 2010 - Milfont Consulting</a></span>
+				<small class="comment-meta">				
+				<span class="pingtype">Pingback</span> on <a href="#comment-2313" title="Permanent Link to this Comment">May 29th, 2010 at 3:52 am</a>				
+								</small>
+			</li>
+			
+			<li id="comment-2556" class="pingback c2 c-y2010 c-m10 c-d05 c-h08">
+								<a href="#comment-2556" title="Permanent Link to this Comment" class="counter">2</a>
+				<span class="commentauthor"><a href='http://philcalcado.com/2010/10/04/some-thoughts-on-database-integration-and-domain-driven-design/' rel='external nofollow'>Some Thoughts on Database Integration and Domain-Driven Design at PhilCalcado.com</a></span>
+				<small class="comment-meta">				
+				<span class="pingtype">Pingback</span> on <a href="#comment-2556" title="Permanent Link to this Comment">Oct 4th, 2010 at 6:08 pm</a>				
+								</small>
+			</li>
+			
+			<li id="comment-2796" class="pingback c3 c-y2010 c-m12 c-d20 c-h09 alt">
+								<a href="#comment-2796" title="Permanent Link to this Comment" class="counter">3</a>
+				<span class="commentauthor"><a href='http://philcalcado.com/2010/12/19/expressiveness-omnibus/' rel='external nofollow'>Expressiveness Omnibus at PhilCalcado.com</a></span>
+				<small class="comment-meta">				
+				<span class="pingtype">Pingback</span> on <a href="#comment-2796" title="Permanent Link to this Comment">Dec 19th, 2010 at 6:21 pm</a>				
+								</small>
+			</li>
+			
+			<li id="comment-2819" class="pingback c4 c-y2010 c-m12 c-d24 c-h07">
+								<a href="#comment-2819" title="Permanent Link to this Comment" class="counter">4</a>
+				<span class="commentauthor"><a href='http://philcalcado.com/2010/12/23/how-to-write-a-repository/' rel='external nofollow'>How to Write a Repository at PhilCalcado.com</a></span>
+				<small class="comment-meta">				
+				<span class="pingtype">Pingback</span> on <a href="#comment-2819" title="Permanent Link to this Comment">Dec 23rd, 2010 at 4:59 pm</a>				
+								</small>
+			</li>
+					</ol> <!-- END #pinglist -->
+				
+				
+		
+	</div> <!-- END .comments 1 -->
+		
+		
+		<div class="comments">
+		<h4 id="respond" class="reply"></h4>
+		
+		
+			<form action="http://philcalcado.com/wp-comments-post.php" method="post" id="commentform" style="visibility:hidden" style="visibility:hidden">
+
+						
+							<div id="comment-personaldetails">
+					<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+					<label for="author"><small><strong>Name</strong> </small></label></p>
+
+					<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+					<label for="email"><small><strong>Mail</strong> (will not be published) </small></label></p>
+
+					<p><input type="text" name="url" id="url" value="" size="22" tabindex="3" />
+					<label for="url"><small><strong>Website</strong></small></label></p>
+				</div>
+							<!--<p><small><strong>XHTML:</strong> You can use these tags &lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; :</small></p>-->
+		
+				<p><textarea name="comment" id="comment" cols="100%" rows="10" tabindex="4"></textarea></p>
+		
+								
+				<p>
+					<input name="submit" type="submit" id="submit" tabindex="5" value="Submit" />
+					<input type="hidden" name="comment_post_ID" value="163" />
+				</p>
+				
+				<div class="clear"></div>
+
+				
+			</form>
+
+				
+			
+	<hr />
+
+	
+	<div class="navigation">
+		<div class="left"><span>&laquo;</span> <a href="http://philcalcado.com/2010/03/10/everyday-tales-anatomy-of-a-refactoring-%e2%80%93-part-3/">Everyday Tales: Anatomy of a Refactoring – Part 3</a></div>		<div class="right"><a href="http://philcalcado.com/2010/05/08/recovering-agile-projects/">Recovering Agile Projects</a> <span>&raquo;</span></div>		<div class="clear"></div>
+	</div>
+
+	
+	<hr />
+	
+	</div> <!-- END .comments #2 -->
+	
+			</div> <!-- #primarycontent .hfeed -->
+		</div> <!-- #current-content -->
+
+		<div id="dynamic-content"></div>
+	</div> <!-- #primary -->
+
+	<hr />
+
+<div class="secondary">
+
+
+	<div id="search"><h2>Search</h2>
+		
+<form method="get" id="searchform" action="/index.php">
+	<input type="text" id="s" name="s" value="search blog archives" />
+	<input type="submit" id="searchsubmit" value="go" />
+</form>
+
+
+	</div>
+
+
+	
+	
+	
+	
+
+	
+			
+
+	
+
+		
+
+	 
+	<div class="sb-related">
+		<h2>Post Meta</h2>
+		
+		<ul>
+																	</ul>
+	</div>
+	
+	<br /><br /><br /><br />
+<center><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/us/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/us/88x31.png"/></a></center>
+
+<p>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/us/">Creative Commons Attribution-Share Alike 3.0 United States License</a>.
+</p>
+
+
+
+
+</div>
+
+<div class="clear"></div>
+
+</div> <!-- .content -->
+
+<imr src="http://philcalcado.com/about/hitme/">
+
+	<div class="clear"></div>
+</div> <!-- Close Page -->
+
+<hr />
+
+<p id="footer"><small>
+	PhilCalcado.com is powered by <a href="http://wordpress.org/" title="Where children sing songs of binary bliss">WordPress 2.5</a> and <a href="http://www.longren.org/unwakeable" title="Unwakeable">Unwakeable 1.2</a><br /> 
+		Prepared In: 4.319 sec. w/ 25 queries.<br />
+	<a href="http://philcalcado.com/feed/">RSS Entries</a> and <a href="http://philcalcado.com/comments/feed/">RSS Comments</a><br />
+	<!-- 25 queries. 4.3190 seconds. -->
+</small></p>
+
+
+	<script class="javascript" src="http://philcalcado.com/wp-content/plugins/google-syntax-highlighter/Scripts/shCore.js"></script>
+<script class="javascript" src="http://philcalcado.com/wp-content/plugins/google-syntax-highlighter/Scripts/shBrushCSharp.js"></script>
+<script class="javascript" src="http://philcalcado.com/wp-content/plugins/google-syntax-highlighter/Scripts/shBrushPhp.js"></script>
+<script class="javascript" src="http://philcalcado.com/wp-content/plugins/google-syntax-highlighter/Scripts/shBrushJScript.js"></script>
+<script class="javascript" src="http://philcalcado.com/wp-content/plugins/google-syntax-highlighter/Scripts/shBrushJava.js"></script>
+<script class="javascript" src="http://philcalcado.com/wp-content/plugins/google-syntax-highlighter/Scripts/shBrushVb.js"></script>
+<script class="javascript" src="http://philcalcado.com/wp-content/plugins/google-syntax-highlighter/Scripts/shBrushSql.js"></script>
+<script class="javascript" src="http://philcalcado.com/wp-content/plugins/google-syntax-highlighter/Scripts/shBrushXml.js"></script>
+<script class="javascript" src="http://philcalcado.com/wp-content/plugins/google-syntax-highlighter/Scripts/shBrushDelphi.js"></script>
+<script class="javascript" src="http://philcalcado.com/wp-content/plugins/google-syntax-highlighter/Scripts/shBrushPython.js"></script>
+<script class="javascript" src="http://philcalcado.com/wp-content/plugins/google-syntax-highlighter/Scripts/shBrushRuby.js"></script>
+<script class="javascript" src="http://philcalcado.com/wp-content/plugins/google-syntax-highlighter/Scripts/shBrushCss.js"></script>
+<script class="javascript" src="http://philcalcado.com/wp-content/plugins/google-syntax-highlighter/Scripts/shBrushCpp.js"></script>
+<script class="javascript">
+dp.SyntaxHighlighter.ClipboardSwf = 'http://philcalcado.com/wp-content/plugins/google-syntax-highlighter/Scripts/clipboard.swf';
+dp.SyntaxHighlighter.HighlightAll('code');
+</script>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-134259-3");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html> 
