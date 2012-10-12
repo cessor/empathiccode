@@ -7,7 +7,7 @@ A good point to start is to remove weasel words in code. Weasel words are class-
 I wrote an [article about weasel words](http://www.dotnetpro.de/articles/showarticle.aspx?id=4046) in THE German .NET magazine dotnetpro that many people liked! 
 
 See my blog for some updates:
-(http://empathic.herokuapp.com)[http://empathic.herokuapp.com]
+[http://empathic.herokuapp.com](http://empathic.herokuapp.com)
 
 I held this presentation at the following occasions: 
 
