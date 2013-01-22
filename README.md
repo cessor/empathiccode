@@ -19,3 +19,4 @@ I held this presentation at the following occasions:
  Upcoming
  -------- 
  - 24.01.2013 - [.NET Usergroup Mannheim](http://jug-mannheim.mixxt.de/networks/events/show_event.72159)
+ - 6.03.2013 - [VSOne Rosenheim](http://www.vsone.de/vortraege.aspx#EmpathicCode)
