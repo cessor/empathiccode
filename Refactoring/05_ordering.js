@@ -132,10 +132,7 @@ var calculateMaterialPrice = function (g_current_round)  {
 
 
 
-Lieber Johannes. Ich weiss du wirst es bis morgen vergessen haben. 
-Wenn du mit erklären fertig bist, musst du wieder zu den Slides zurück und erklären,
-wie Extract Method nach dem Buch funktioniert!
-		- Lg, Ich von vor knapp 13 Stunden.
+
 
 
 
@@ -156,9 +153,7 @@ var calcFormulas = function(input_variables, last_round, g_current_round, g_addC
 
 	calculateDistributors(shop, last_round, g_current_round);
 		
-	//====================================
 	// Neue Werte berechnen
-	//====================================
 	shop.Satisfaction = calculateSatisfaction(shop);									// Arbeitszufriedenheit
 	shop.TotalSocialCosts = shop.Social * (shop.Workers50 + shop.Workers100);			// Intern: Sozialkosten
 	shop.Account = shop.Account - shop.TotalSocialCosts; 								// FlÃ¼ssigkapital Update 1
