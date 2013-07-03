@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RefuctoringChallenge", "RefuctoringChallenge\RefuctoringChallenge.csproj", "{697E2B06-F2FA-400C-9FCB-EA0DA2BEA1E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StupidComments", "StupidComments\StupidComments.csproj", "{7A864908-DADE-446D-B8DB-47B90F7579A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PolyMorphism", "PolyMorphism\PolyMorphism.csproj", "{22A929E5-82D2-4F71-9AA8-7C426F3B7337}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{697E2B06-F2FA-400C-9FCB-EA0DA2BEA1E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{697E2B06-F2FA-400C-9FCB-EA0DA2BEA1E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{697E2B06-F2FA-400C-9FCB-EA0DA2BEA1E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{697E2B06-F2FA-400C-9FCB-EA0DA2BEA1E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A864908-DADE-446D-B8DB-47B90F7579A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A864908-DADE-446D-B8DB-47B90F7579A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A864908-DADE-446D-B8DB-47B90F7579A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A864908-DADE-446D-B8DB-47B90F7579A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22A929E5-82D2-4F71-9AA8-7C426F3B7337}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22A929E5-82D2-4F71-9AA8-7C426F3B7337}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22A929E5-82D2-4F71-9AA8-7C426F3B7337}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22A929E5-82D2-4F71-9AA8-7C426F3B7337}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

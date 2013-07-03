@@ -1,0 +1,15 @@
+{
+  "name": "intent.js",
+  "version": "0.0.2",
+  "description": "Functional testing for Node.js and JavaScript.",
+  "author": "Golo Roden <webmaster@goloroden.de>",
+  "main": "./lib/index",
+  "dependencies": {
+    "compare.js": "0.0.9",
+    "underscore": "1.4.2" 
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/goloroden/intent.js.git"
+  }
+}
